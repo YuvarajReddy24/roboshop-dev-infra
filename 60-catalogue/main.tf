@@ -32,13 +32,13 @@ resource "terraform_data" "catalogue" {
     destination = "/tmp/catalogue.sh"
   }
 
-  provisioner "remote-exec" {
-    inline = [
-        "chmod +x /tmp/catalogue.sh",
-        # "sudo sh /tmp/catalogue.sh"
-        "sudo sh /tmp/catalogue.sh catalogue ${var.environment}"
-    ]
-  }
+#   provisioner "remote-exec" {
+#     inline = [
+#         "chmod +x /tmp/catalogue.sh",
+#         # "sudo sh /tmp/catalogue.sh"
+#         "sudo sh /tmp/catalogue.sh catalogue ${var.environment}"
+#     ]
+#   }
 }
 
 # stop the instance to take image
