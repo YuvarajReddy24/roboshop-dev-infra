@@ -194,7 +194,7 @@ resource "terraform_data" "catalogue_local" {
   ]
   
 #   depends_on = [aws_autoscaling_policy.catalogue]
-  provisioner "local-exec" {
-    command = "aws ec2 terminate-instances --instance-ids ${aws_instance.catalogue.id}"
-  }
+#   provisioner "local-exec" {
+#     command = "aws ec2 terminate-instances --instance-ids ${aws_instance.catalogue.id}"
+#   }
 }
